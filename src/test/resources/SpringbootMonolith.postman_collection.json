@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "0289b960-4224-4149-b0df-5de7c07023af",
+		"name": "SpringbootMonolith",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "IdProof",
+			"item": [
+				{
+					"name": "Post_IdProof",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"proofName\":\"Adhar\",\r\n    \"person\":{\r\n        \"personName\":\"Pavan Kumar Reddyy\",\r\n        \"gender\":\"MALE\",\r\n        \"mobileNumber\":9704002726\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/idProof/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"idProof",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_All_IdProofs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/idProof/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"idProof",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put_IdProof",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n        \"proofId\": \"1f62a1d4-3d06-4724-8f73-5903199c781a\",\n        \"proofName\": \"Adhar\",\n        \"person\": {\n            \"personId\": \"a2b00815-b4d4-483a-9ed1-8a610a08cd2\",\n            \"personName\": \"Pavan Kumar Reddjmghy\",\n            \"gender\": \"MALE\",\n            \"mobileNumber\": 9704002726232,\n            \"project\": []\n        }\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/idProof/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"idProof",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Proof",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/idProof/1f62a1d4-3d06-4724-8f73-5903199c781a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"idProof",
+								"1f62a1d4-3d06-4724-8f73-5903199c781a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_IdProofByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Project",
+			"item": [
+				{
+					"name": "Post_Project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"projectName\": \"Machine learning\",\r\n    \"projectDescription\": \"It is a ML based application\",\r\n    \"projectType\": \"MINOR\",\r\n    \"person\": {\r\n        \"personName\": \"Pavan Kumar Reddyy\",\r\n        \"mobileNumber\":9704002726\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/project/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"project",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_Projects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/project/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"project",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_ProjectByPerson",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/project/person?personName=Pavan Kumar Reddyy&mobileNumber=9704002726",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"project",
+								"person"
+							],
+							"query": [
+								{
+									"key": "personName",
+									"value": "Pavan Kumar Reddyy"
+								},
+								{
+									"key": "mobileNumber",
+									"value": "9704002726"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put_Project",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_All_Projects_ByPerson",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
